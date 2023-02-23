@@ -49,3 +49,26 @@ document.getElementById('calculator').addEventListener('click',function(){
     }
 
 })
+
+
+document.getElementById('btn-submit').addEventListener('click',function(){
+   const displayPinField = document.getElementById('display-pin');
+   const currentPin = displayPinField.value;
+
+   const typedNumbersField=document.getElementById('typed-numbers');
+   const typedNumber = typedNumbersField.value;
+   const pinSuccessMassage = document.getElementById('pin-success');
+   const pinFailureMassage = document.getElementById('pin-failure');
+
+   if(currentPin===typedNumber){
+    
+    pinSuccessMassage.style.display='block';
+    pinFailureMassage.style.display='none';
+   }
+   else{
+
+    pinFailureMassage.style.display='block';
+    pinSuccessMassage.style.display='none';
+    
+   }
+})
